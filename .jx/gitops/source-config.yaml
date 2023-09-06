@@ -1,0 +1,21 @@
+apiVersion: gitops.jenkins-x.io/v1alpha1
+kind: SourceConfig
+metadata:
+  creationTimestamp: null
+spec:
+  groups:
+  - owner: runwhen
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: infra-flux-nonprod-sandbox-jx-quickstart-golang-http
+    - name: infra-flux-nonprod-sandbox-jx-quickstart-http
+    scheduler: in-repo
+  - owner: BSGalactica
+    provider: https://github.com
+    providerKind: github
+    scheduler: in-repo
+  slack:
+    channel: '#jenkins-x-pipelines'
+    kind: failureOrNextSuccess
+    pipeline: release
