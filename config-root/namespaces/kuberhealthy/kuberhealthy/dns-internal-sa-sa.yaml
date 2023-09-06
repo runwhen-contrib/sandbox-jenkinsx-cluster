@@ -1,0 +1,10 @@
+# Source: kuberhealthy/templates/khcheck-dns-internal.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dns-internal-sa
+  namespace: kuberhealthy
+  annotations:
+    meta.helm.sh/release-name: 'kuberhealthy'
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'

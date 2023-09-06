@@ -1,0 +1,116 @@
+apiVersion: v1
+data:
+  plugins.yaml: |
+    approve:
+    - lgtm_acts_as_approve: true
+      repos:
+      - runwhen/infra-flux-nonprod-sandbox-jx
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http
+      require_self_approval: true
+    cat: {}
+    cherry_pick_unapproved: {}
+    config_updater:
+      gzip: false
+      maps:
+        env/prow/job.yaml:
+          name: config
+        env/prow/plugins.yaml:
+          name: plugins
+    external_plugins:
+      runwhen/infra-flux-nonprod-sandbox-jx:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+    heart: {}
+    label:
+      additional_labels: null
+    owners: {}
+    plugins:
+      runwhen/infra-flux-nonprod-sandbox-jx:
+      - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+    requiresig: {}
+    sigmention: {}
+    size:
+      l: 0
+      m: 0
+      s: 0
+      xl: 0
+      xxl: 0
+    triggers:
+    - repos:
+      - runwhen/infra-flux-nonprod-sandbox-jx
+      trusted_org: runwhen
+    - repos:
+      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http
+      trusted_org: runwhen
+    - repos:
+      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http
+      trusted_org: runwhen
+    welcome:
+    - message_template: Welcome
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: plugins
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'

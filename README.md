@@ -1,2 +1,6 @@
-# sandbox-jenkinsx-cluster
-[Public] A GitOps cluster repo for JenkinsX in the lab infrastructure - Managed by terraform
+# jx3-kubernetes
+
+Jenkins X 3.x GitOps repository for a vanilla Kubernetes cluster
+        
+[![Jenkins X Releases](https://img.shields.io/badge/Jenkins%20X-Releases-blue)](docs/README.md)
+ 
