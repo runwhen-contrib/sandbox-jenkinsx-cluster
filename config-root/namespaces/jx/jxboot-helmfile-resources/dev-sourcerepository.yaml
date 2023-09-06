@@ -14,10 +14,10 @@ spec:
   provider: "https://github.com"
   providerKind: 'github'
   providerName: 'github'
-  org: "runwhen"
-  repo: "infra-flux-nonprod-sandbox-jx"
-  httpCloneURL: "https://github.com/runwhen/infra-flux-nonprod-sandbox-jx.git"
-  url: "https://github.com/runwhen/infra-flux-nonprod-sandbox-jx.git"
+  org: "runwhen-contrib"
+  repo: "sandbox-jenkinsx-cluster"
+  httpCloneURL: "https://github.com/runwhen-contrib/sandbox-jenkinsx-cluster.git"
+  url: "https://github.com/runwhen-contrib/sandbox-jenkinsx-cluster.git"
   scheduler:
     kind: Scheduler
     name: "in-repo"

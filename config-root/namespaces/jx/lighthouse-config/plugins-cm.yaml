@@ -4,15 +4,7 @@ data:
     approve:
     - lgtm_acts_as_approve: true
       repos:
-      - runwhen/infra-flux-nonprod-sandbox-jx
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http
+      - runwhen-contrib/sandbox-jenkinsx-cluster
       require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
@@ -24,17 +16,7 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
-      runwhen/infra-flux-nonprod-sandbox-jx:
-      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
-        name: cd-indicators
-      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
-        name: lighthouse-webui-plugin
-      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http:
-      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
-        name: cd-indicators
-      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
-        name: lighthouse-webui-plugin
-      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http:
+      runwhen-contrib/sandbox-jenkinsx-cluster:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -44,36 +26,8 @@ data:
       additional_labels: null
     owners: {}
     plugins:
-      runwhen/infra-flux-nonprod-sandbox-jx:
+      runwhen-contrib/sandbox-jenkinsx-cluster:
       - config-updater
-      - approve
-      - assign
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - cat
-      - dog
-      - pony
-      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http:
-      - approve
-      - assign
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - cat
-      - dog
-      - pony
-      runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http:
       - approve
       - assign
       - help
@@ -97,16 +51,8 @@ data:
       xxl: 0
     triggers:
     - repos:
-      - runwhen/infra-flux-nonprod-sandbox-jx
-      trusted_org: runwhen
-    - repos:
-      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-golang-http
-      trusted_org: runwhen
-    - repos:
-      - runwhen/infra-flux-nonprod-sandbox-jx-quickstart-http
-      trusted_org: runwhen
-    welcome:
-    - message_template: Welcome
+      - runwhen-contrib/sandbox-jenkinsx-cluster
+      trusted_org: runwhen-contrib
 kind: ConfigMap
 metadata:
   creationTimestamp: null
