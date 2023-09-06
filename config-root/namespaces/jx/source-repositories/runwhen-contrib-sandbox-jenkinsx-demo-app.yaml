@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: runwhen-contrib
+    provider: github
+    repository: sandbox-jenkinsx-demo-app
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: runwhen-contrib-sandbox-jenkinsx-demo-app
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/runwhen-contrib/sandbox-jenkinsx-demo-app.git
+  org: runwhen-contrib
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: sandbox-jenkinsx-demo-app
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/runwhen-contrib/sandbox-jenkinsx-demo-app

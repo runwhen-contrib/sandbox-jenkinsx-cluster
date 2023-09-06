@@ -6,6 +6,10 @@ data:
       repos:
       - runwhen-contrib/sandbox-jenkinsx-cluster
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - runwhen-contrib/sandbox-jenkinsx-demo-app
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +25,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      runwhen-contrib/sandbox-jenkinsx-demo-app:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +37,20 @@ data:
     plugins:
       runwhen-contrib/sandbox-jenkinsx-cluster:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      runwhen-contrib/sandbox-jenkinsx-demo-app:
       - approve
       - assign
       - help
@@ -53,6 +76,11 @@ data:
     - repos:
       - runwhen-contrib/sandbox-jenkinsx-cluster
       trusted_org: runwhen-contrib
+    - repos:
+      - runwhen-contrib/sandbox-jenkinsx-demo-app
+      trusted_org: runwhen-contrib
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         runwhen-contrib/sandbox-jenkinsx-cluster: true
+        runwhen-contrib/sandbox-jenkinsx-demo-app: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         runwhen-contrib/sandbox-jenkinsx-cluster: merge
+        runwhen-contrib/sandbox-jenkinsx-demo-app: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - runwhen-contrib/sandbox-jenkinsx-cluster
+        - runwhen-contrib/sandbox-jenkinsx-demo-app
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - runwhen-contrib/sandbox-jenkinsx-cluster
+        - runwhen-contrib/sandbox-jenkinsx-demo-app
       target_url: http://lighthouse-jx.sandbox.runwhen.com/merge/status
 kind: ConfigMap
 metadata:
