@@ -25,12 +25,13 @@ jxRequirements:
     clusterName: kind
     devEnvApprovers:
     - todo
+    dockerRegistryOrg: stewartshea
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
     provider: kubernetes
-    registry: ghcr.io
+    registry: registry.hub.docker.com
   environments:
   - key: dev
     owner: runwhen-contrib

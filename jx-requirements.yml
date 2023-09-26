@@ -9,13 +9,13 @@ spec:
     clusterName: kind
     devEnvApprovers:
     - todo
+    dockerRegistryOrg: stewartshea
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
     provider: kubernetes
     registry: registry.hub.docker.com
-    dockerRegistryOrg: stewartshea
   environments:
   - key: dev
     owner: runwhen-contrib
