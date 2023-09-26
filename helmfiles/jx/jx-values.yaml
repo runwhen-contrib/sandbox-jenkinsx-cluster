@@ -48,7 +48,7 @@ jxRequirements:
       production: false
   pipelineUser:
     username: stewartshea
-  repository: bucketrepo
+  repository: none
   secretStorage: local
   vault: {}
   webhook: lighthouse

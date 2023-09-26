@@ -8,8 +8,8 @@
     home: https://github.com/jenkins-x-charts/jxboot-helmfile-resources
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
     ingresses:
-    - name: bucketrepo
-      url: http://bucketrepo-jx.sandbox.runwhen.com
+    - name: chartmuseum
+      url: http://chartmuseum-jx.sandbox.runwhen.com
     - name: hook
       url: http://hook-jx.sandbox.runwhen.com/hook
     lastDeployed: "2023-08-29T16:53:50Z"
