@@ -14,7 +14,8 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: kubernetes
-    registry: ghcr.io
+    registry: registry.hub.docker.com
+    dockerRegistryOrg: stewartshea
   environments:
   - key: dev
     owner: runwhen-contrib
