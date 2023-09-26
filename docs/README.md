@@ -53,9 +53,9 @@
     <tr>
 	      <td>bucketrepo</td>
 	      <td title='A Helm chart for bucketrepo service'> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png' width='24px' height='24px'> bucketrepo</td>
-	      <td>0.1.67</td>
+	      <td>0.5.0</td>
 	      <td></td>
-	      <td></td>
+	      <td><a href='https://github.com/jenkins-x/bucketrepo.git'>source</a></td>
 	    </tr>
     <tr>
 	      <td>jx-build-controller</td>

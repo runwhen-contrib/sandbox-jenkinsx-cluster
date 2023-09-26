@@ -5,7 +5,7 @@ metadata:
   name: bucketrepo-bucketrepo
   labels:
     draft: draft-app
-    chart: "bucketrepo-0.1.67"
+    chart: "bucketrepo-0.5.0"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'bucketrepo'
@@ -26,9 +26,8 @@ spec:
     spec:
       containers:
       - name: bucketrepo
-        image: "ghcr.io/jenkins-x/bucketrepo:0.1.67"
+        image: "ghcr.io/jenkins-x/bucketrepo:0.5.0"
         imagePullPolicy: IfNotPresent
-        command: ["/home/nonroot/bucketrepo"]
         args:
         - "-config-path=/config"
         - "-log-level=info"
